@@ -1,15 +1,15 @@
 import React, {useContext} from 'react';
-import {VillageContext} from "../contexts/CartContext";
-
+import {VillageContext} from "../contexts/VillageContext";
+import Smurf from "./Smurf";
 const Village =  () => {
-	const village = useContext(VillageContext);
-	
 
+	const house = useContext(VillageContext);
+	
 	return (
 		<div>
-				{smurfs.map(item => {
+				{house.map(item => {
                     return (
-                      <SmurfCard
+                      <Smurf
                         key={item.id}
                         name={item.name}
                         age={item.age}
@@ -18,13 +18,9 @@ const Village =  () => {
                     )
                   })
                   }
-          
 			))}
-
-			<div className="shopping-cart__checkout">
-				<p>Total: ${getCartTotal()}</p>
-				<button>Checkout</button>
 			</div>
-		</div>
 	);
 };
+
+export default Village;

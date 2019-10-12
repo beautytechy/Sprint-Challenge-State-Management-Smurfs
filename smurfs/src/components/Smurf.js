@@ -1,14 +1,16 @@
 import React from 'react';
+import VillageContext from "../contexts/VillageContext";
 
-const Smurf = props => {
+
+const Smurf = ({props}) => {
 	return (
 		<div className="smurf">
-		
-			<h1>{props.smurf.name}</h1>
-      <p>{props.smurf.age}</p>
-			<p>{props.smurf.height}</p>
 
-			</div>
+			<h1>{props.smurfData.name}</h1>
+			<p>{props.smurfData.age}</p>
+			<p>{props.smurfData.height}</p>
+
+		</div>
 	);
 };
 
